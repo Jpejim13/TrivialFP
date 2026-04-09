@@ -1,0 +1,57 @@
+============================================================
+       CHULETA DE COMANDOS QT (PYSIDE6) - TRIVIAL
+============================================================
+
+1. QLabel (Etiquetas / Texto / Imágenes)
+-----------------------------------------
+- text()              -> Obtiene el texto que tiene la etiqueta.
+- setText("Texto")    -> Modifica el texto mostrado.
+- setPixmap(pixmap)   -> Carga una imagen (usando QPixmap).
+- setStyleSheet()     -> Cambia color, fuente o fondo (estilo CSS).
+
+2. QPushButton (Botones)
+-----------------------------------------
+- text()              -> Obtiene el texto (útil para ver la respuesta).
+- setText("Texto")    -> Cambia el texto del botón.
+- setEnabled(False)   -> Desactiva el botón (para que no pulsen dos veces).
+- clicked.connect(fn) -> SEÑAL: Ejecuta una función al pulsar.
+
+3. QLineEdit (Entradas de texto)
+-----------------------------------------
+- text()              -> Lee lo que el usuario ha escrito.
+- setText("Texto")    -> Escribe texto automáticamente.
+- clear()             -> Borra todo el contenido.
+- setPlaceholderText()-> Texto de ayuda gris que desaparece al escribir.
+
+4. QStackedWidget (Gestión de Pantallas)
+-----------------------------------------
+- setCurrentIndex(n)  -> Cambia de página (0=Inicio, 1=Juego, 2=Final).
+- currentIndex()      -> Devuelve el número de la página actual.
+
+5. QTimer (Tiempos y Cronómetros)
+-----------------------------------------
+- start(ms)           -> Inicia el contador (1000 ms = 1 segundo).
+- stop()              -> Detiene el contador.
+- timeout.connect(fn) -> Ejecuta una función cada vez que el tiempo termina.
+
+6. Lógica de Colores (QSS)
+-----------------------------------------
+- .setStyleSheet("background-color: green;") -> Poner fondo verde.
+- .setStyleSheet("background-color: red;")   -> Poner fondo rojo.
+- .setStyleSheet("")                         -> Limpiar estilos (volver al original).
+
+7. QMessageBox (Ventanas emergentes)
+-----------------------------------------
+- QMessageBox.information(self, "Título", "Mensaje") -> Alerta básica.
+- QMessageBox.question(...) -> Pregunta de Sí/No.
+
+============================================================
+      CONSEJOS PARA EL TRIVIAL
+============================================================
+* Para comprobar la respuesta: 
+  Compara el texto del botón pulsado con la respuesta correcta de tu base de datos.
+  Ej: if btn.text() == respuesta_correcta: ...
+
+* Gestión de preguntas:
+  No borres botones. Ten 4 botones fijos y usa .setText() para cambiar 
+  las opciones de la siguiente pregunta.
