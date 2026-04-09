@@ -1,0 +1,18 @@
+{
+  "proyecto": "Sistema de Gestión",
+  "version": 1.2,
+  "activo": true,
+  "miembros": [
+    {
+      "nombre": "Ana",
+      "rol": "Developer",
+      "lenguajes": ["Python", "C++"]
+    },
+    {
+      "nombre": "Berto",
+      "rol": "Designer",
+      "lenguajes": ["CSS", "HTML"]
+    }
+  ],
+  "configuracion": null
+}
