@@ -20,17 +20,18 @@ class MainWindow(QtCore.QObject):
         self.window = loader.load(ui_file)
         ui_file.close()
 
-        # IMPORTANTE: En tu UI se llama "Mazo"
         self.pantallas = self.window.pantallas
         self.pantallas.setCurrentIndex(0)
 
         # Conexiones de botones
         self.window.BotonJugar.clicked.connect(lambda: self.on_clicked_cambio_pantalla("elegirModo"))
         self.window.botonKahoot.clicked.connect(lambda: self.on_clicked_cambio_pantalla("pantallaKahoot"))
+
         #se lo pasamos como la lambda pq por defecto la funcion on clicked pasa true o false entonces no podriamos meterle el argumento "elegir modo", la funcion
         #lambda nos permite pasarle el string 
-        
+
         self.window.show()
+        
         
     def on_clicked_cambio_pantalla(self,pantalla):
         minuscula = pantalla.lower()
