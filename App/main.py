@@ -26,6 +26,7 @@ class MainWindow(QtCore.QObject):
 
         # Conexiones de botones
         self.window.BotonJugar.clicked.connect(lambda: self.on_clicked_cambio_pantalla("elegirModo"))
+        self.window.botonKahoot.clicked.connect(lambda: self.on_clicked_cambio_pantalla("pantallaKahoot"))
         #se lo pasamos como la lambda pq por defecto la funcion on clicked pasa true o false entonces no podriamos meterle el argumento "elegir modo", la funcion
         #lambda nos permite pasarle el string 
         
@@ -36,8 +37,8 @@ class MainWindow(QtCore.QObject):
         match minuscula: # Sin paréntesis aquí
             case "elegirmodo": # Importante: comparamos contra minúsculas
                 self.pantallas.setCurrentIndex(1)
-            case "ayuda":
-                print("Mostrando guía de usuario.")
+            case "pantallakahoot":
+                 self.pantallas.setCurrentIndex(2)
             case "salir":
                 print("Cerrando aplicación.")
             case _:
