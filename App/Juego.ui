@@ -26,13 +26,19 @@
          <widget class="QLabel" name="label">
           <property name="font">
            <font>
-            <family>Yu Gothic</family>
+            <family>Lucida Fax</family>
             <pointsize>72</pointsize>
+            <italic>false</italic>
             <bold>true</bold>
+            <strikeout>false</strikeout>
+            <kerning>true</kerning>
            </font>
           </property>
+          <property name="mouseTracking">
+           <bool>false</bool>
+          </property>
           <property name="text">
-           <string>CLICKTHON</string>
+           <string>TRIVIAL</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -54,20 +60,7 @@
       <widget class="QWidget" name="pantallaSeleccionModo">
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <spacer name="verticalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Orientation::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLabel" name="labelModos">
+         <widget class="QLabel" name="desplegableTemas">
           <property name="minimumSize">
            <size>
             <width>0</width>
@@ -90,19 +83,6 @@
          </widget>
         </item>
         <item>
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Orientation::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>30</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
          <widget class="QPushButton" name="botonKahoot">
           <property name="minimumSize">
            <size>
@@ -123,7 +103,7 @@
            </size>
           </property>
           <property name="text">
-           <string>Modo Kahoot</string>
+           <string>Kahoot</string>
           </property>
          </widget>
         </item>
@@ -136,7 +116,7 @@
            </size>
           </property>
           <property name="text">
-           <string>Modo Examen</string>
+           <string>Verdadero o Falso</string>
           </property>
          </widget>
         </item>
@@ -149,8 +129,45 @@
            </size>
           </property>
           <property name="text">
-           <string>Modo Proximal</string>
+           <string>Proximal</string>
           </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBox">
+          <property name="accessibleName">
+           <string/>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">/* Esto centra el texto cuando el ComboBox es EDITABLE */
+QComboBox QLineEdit {
+    qproperty-alignment: 'AlignCenter';
+    background: transparent; /* Para que herede el color del fondo del combo */
+    border: none;            /* Para que no cree un borde doble interno */
+}
+</string>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="currentText">
+           <string>Deportes</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>Deportes</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Historia</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Ciencia y naturaleza</string>
+           </property>
+          </item>
          </widget>
         </item>
        </layout>
