@@ -6,24 +6,40 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>884</width>
+    <width>897</width>
     <height>667</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Clickthon</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #ECF0F1;
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="3" column="0">
+    <item row="0" column="0">
      <widget class="QStackedWidget" name="pantallas">
       <property name="currentIndex">
        <number>2</number>
       </property>
       <widget class="QWidget" name="pantallaInicio">
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="font">
+        <font>
+         <italic>false</italic>
+        </font>
+       </property>
+       <property name="layoutDirection">
+        <enum>Qt::LayoutDirection::LeftToRight</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,0">
         <item>
          <widget class="QLabel" name="label">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
           <property name="font">
            <font>
             <family>Lucida Fax</family>
@@ -46,14 +62,56 @@
          </widget>
         </item>
         <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Policy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>30</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <widget class="QPushButton" name="BotonJugar">
+          <property name="minimumSize">
+           <size>
+            <width>250</width>
+            <height>60</height>
+           </size>
+          </property>
           <property name="focusPolicy">
            <enum>Qt::FocusPolicy::TabFocus</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 20pt &quot;Sylfaen&quot;;
+background-color: #2980B9;</string>
           </property>
           <property name="text">
            <string>Jugar</string>
           </property>
          </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Policy::Fixed</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>30</height>
+           </size>
+          </property>
+         </spacer>
         </item>
        </layout>
       </widget>
@@ -102,6 +160,34 @@
             <height>0</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    /* El morado oficial de Kahoot */
+    background-color: #46178F;
+    
+    /* Texto en blanco y con peso */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    
+    /* Bordes redondeados típicos de su interfaz */
+    border-radius: 10px;
+    
+    /* Un pequeño sombreado en la parte inferior para darle efecto 3D (opcional) */
+    border-bottom: 4px solid #331168;
+}
+
+/* Efecto cuando pasas el ratón */
+QPushButton:hover {
+    background-color: #551ca9;
+}
+
+/* Efecto cuando haces clic (se hunde) */
+QPushButton:pressed {
+    border-bottom: 0px;
+    margin-top: 4px;
+}</string>
+          </property>
           <property name="text">
            <string>Kahoot</string>
           </property>
@@ -115,6 +201,34 @@
             <height>100</height>
            </size>
           </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    /* Degradado Rojo y Azul partido */
+    background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, 
+                                      stop:0 #e74c3c, stop:0.499 #e74c3c, 
+                                      stop:0.5 #3498db, stop:1 #3498db);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    
+    /* El borde de abajo para el efecto 3D */
+    /* Usamos un gris oscuro para que funcione con ambos colores */
+    border-bottom: 4px solid #2c3e50; 
+    padding: 10px;
+}
+
+/* Efecto al pasar el ratón (brilla un poco) */
+QPushButton:hover {
+    border-bottom: 4px solid #1a252f;
+}
+
+/* Efecto de hundimiento al pulsar */
+QPushButton:pressed {
+    border-bottom: 0px;
+    margin-top: 4px;
+}</string>
+          </property>
           <property name="text">
            <string>Verdadero o Falso</string>
           </property>
@@ -127,6 +241,34 @@
             <width>0</width>
             <height>100</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    /* El morado oficial de Kahoot */
+    background-color: #46178F;
+    
+    /* Texto en blanco y con peso */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    
+    /* Bordes redondeados típicos de su interfaz */
+    border-radius: 10px;
+    
+    /* Un pequeño sombreado en la parte inferior para darle efecto 3D (opcional) */
+    border-bottom: 4px solid #331168;
+}
+
+/* Efecto cuando pasas el ratón */
+QPushButton:hover {
+    background-color: #551ca9;
+}
+
+/* Efecto cuando haces clic (se hunde) */
+QPushButton:pressed {
+    border-bottom: 0px;
+    margin-top: 4px;
+}</string>
           </property>
           <property name="text">
            <string>Proximal</string>
@@ -337,7 +479,7 @@ QComboBox QLineEdit {
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>884</width>
+     <width>897</width>
      <height>33</height>
     </rect>
    </property>
