@@ -1,6 +1,6 @@
 import random
 
-# --- CLASES BASE Y HERENCIA ---
+
 
 class Pregunta:
     def __init__(self, enunciado, correcta):
@@ -17,7 +17,6 @@ class PreguntaOpcionMultiple(Pregunta):
         self.opciones = opciones
 
     def obtener_opciones(self):
-        # Devolvemos una copia mezclada
         lista = self.opciones.copy()
         random.shuffle(lista)
         return lista
@@ -28,7 +27,6 @@ class PreguntaVerdaderoFalso(Pregunta):
         self.opciones = ["Verdadero", "Falso"]
 
     def obtener_opciones(self):
-        # En V/F no solemos mezclar para mantener el orden lógico
         return self.opciones
 
 preguntas_historia = [
