@@ -14,16 +14,14 @@
    <string>Clickthon</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget {
-    background-color: #ECF0F1;
-}</string>
+   <string notr="true">QWidget { background-color: #ECF0F1; }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QStackedWidget" name="pantallas">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="pantallaInicio">
        <property name="font">
@@ -89,8 +87,7 @@
            <enum>Qt::FocusPolicy::TabFocus</enum>
           </property>
           <property name="styleSheet">
-           <string notr="true">font: 20pt &quot;Sylfaen&quot;;
-background-color: #2980B9;</string>
+           <string notr="true">font: 20pt &quot;Sylfaen&quot;; background-color: #2980B9; color: white; border-radius: 10px;</string>
           </property>
           <property name="text">
            <string>Jugar</string>
@@ -148,45 +145,8 @@ background-color: #2980B9;</string>
             <height>100</height>
            </size>
           </property>
-          <property name="sizeIncrement">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="baseSize">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
           <property name="styleSheet">
-           <string notr="true">QPushButton {
-    /* El morado oficial de Kahoot */
-    background-color: #46178F;
-    
-    /* Texto en blanco y con peso */
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    
-    /* Bordes redondeados típicos de su interfaz */
-    border-radius: 10px;
-    
-    /* Un pequeño sombreado en la parte inferior para darle efecto 3D (opcional) */
-    border-bottom: 4px solid #331168;
-}
-
-/* Efecto cuando pasas el ratón */
-QPushButton:hover {
-    background-color: #551ca9;
-}
-
-/* Efecto cuando haces clic (se hunde) */
-QPushButton:pressed {
-    border-bottom: 0px;
-    margin-top: 4px;
-}</string>
+           <string notr="true">QPushButton { background-color: #46178F; color: white; font-weight: bold; font-size: 18px; border-radius: 10px; border-bottom: 4px solid #331168; } QPushButton:hover { background-color: #551ca9; } QPushButton:pressed { border-bottom: 0px; margin-top: 4px; }</string>
           </property>
           <property name="text">
            <string>Kahoot</string>
@@ -202,32 +162,7 @@ QPushButton:pressed {
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">QPushButton {
-    /* Degradado Rojo y Azul partido */
-    background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, 
-                                      stop:0 #e74c3c, stop:0.499 #e74c3c, 
-                                      stop:0.5 #3498db, stop:1 #3498db);
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 10px;
-    
-    /* El borde de abajo para el efecto 3D */
-    /* Usamos un gris oscuro para que funcione con ambos colores */
-    border-bottom: 4px solid #2c3e50; 
-    padding: 10px;
-}
-
-/* Efecto al pasar el ratón (brilla un poco) */
-QPushButton:hover {
-    border-bottom: 4px solid #1a252f;
-}
-
-/* Efecto de hundimiento al pulsar */
-QPushButton:pressed {
-    border-bottom: 0px;
-    margin-top: 4px;
-}</string>
+           <string notr="true">QPushButton { background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0 #e74c3c, stop:0.499 #e74c3c, stop:0.5 #3498db, stop:1 #3498db); color: white; font-weight: bold; font-size: 18px; border-radius: 10px; border-bottom: 4px solid #2c3e50; padding: 10px; } QPushButton:hover { border-bottom: 4px solid #1a252f; } QPushButton:pressed { border-bottom: 0px; margin-top: 4px; }</string>
           </property>
           <property name="text">
            <string>Verdadero o Falso</string>
@@ -243,32 +178,7 @@ QPushButton:pressed {
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">QPushButton {
-    /* El morado oficial de Kahoot */
-    background-color: #46178F;
-    
-    /* Texto en blanco y con peso */
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    
-    /* Bordes redondeados típicos de su interfaz */
-    border-radius: 10px;
-    
-    /* Un pequeño sombreado en la parte inferior para darle efecto 3D (opcional) */
-    border-bottom: 4px solid #331168;
-}
-
-/* Efecto cuando pasas el ratón */
-QPushButton:hover {
-    background-color: #551ca9;
-}
-
-/* Efecto cuando haces clic (se hunde) */
-QPushButton:pressed {
-    border-bottom: 0px;
-    margin-top: 4px;
-}</string>
+           <string notr="true">QPushButton { background-color: #46178F; color: white; font-weight: bold; font-size: 18px; border-radius: 10px; border-bottom: 4px solid #331168; } QPushButton:hover { background-color: #551ca9; } QPushButton:pressed { border-bottom: 0px; margin-top: 4px; }</string>
           </property>
           <property name="text">
            <string>Proximal</string>
@@ -277,17 +187,8 @@ QPushButton:pressed {
         </item>
         <item>
          <widget class="QComboBox" name="comboBox">
-          <property name="accessibleName">
-           <string/>
-          </property>
           <property name="styleSheet">
-           <string notr="true">/* Esto centra el texto cuando el ComboBox es EDITABLE */
-QComboBox QLineEdit {
-    qproperty-alignment: 'AlignCenter';
-    background: transparent; /* Para que herede el color del fondo del combo */
-    border: none;            /* Para que no cree un borde doble interno */
-}
-</string>
+           <string notr="true">QComboBox QLineEdit { qproperty-alignment: 'AlignCenter'; background: transparent; border: none; }</string>
           </property>
           <property name="editable">
            <bool>true</bool>
@@ -350,6 +251,9 @@ QComboBox QLineEdit {
           <property name="text">
            <string>Enunciado</string>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
          </widget>
         </item>
         <item>
@@ -383,7 +287,7 @@ QComboBox QLineEdit {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: #26890C;</string>
+             <string notr="true">background-color: #26890C; color: white;</string>
             </property>
             <property name="text">
              <string>Texto4</string>
@@ -406,7 +310,7 @@ QComboBox QLineEdit {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: #D89E00;</string>
+             <string notr="true">background-color: #D89E00; color: white;</string>
             </property>
             <property name="text">
              <string>texto3</string>
@@ -429,7 +333,7 @@ QComboBox QLineEdit {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: #1368CE;</string>
+             <string notr="true">background-color: #1368CE; color: white;</string>
             </property>
             <property name="text">
              <string>Texto2</string>
@@ -452,7 +356,7 @@ QComboBox QLineEdit {
              </font>
             </property>
             <property name="styleSheet">
-             <string notr="true">background-color: #E21B3C;</string>
+             <string notr="true">background-color: #E21B3C; color: white;</string>
             </property>
             <property name="text">
              <string>Texto1</string>
@@ -460,6 +364,117 @@ QComboBox QLineEdit {
            </widget>
           </item>
          </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pantallaProximal">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="EnunciadoProximal">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Yu Gothic</family>
+            <pointsize>22</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Enunciado Proximal</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Policy::Expanding</enum>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QSlider" name="sliderProximal">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="tickPosition">
+           <enum>QSlider::TickPosition::TicksBelow</enum>
+          </property>
+          <property name="tickInterval">
+           <number>10</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="valorSlider">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Yu Gothic</family>
+            <pointsize>18</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Año seleccionado:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Orientation::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Policy::Expanding</enum>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="botonResponderProximal">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Yu Gothic</family>
+            <pointsize>18</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Responder</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>

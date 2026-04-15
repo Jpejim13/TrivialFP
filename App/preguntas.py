@@ -1,14 +1,11 @@
 import random
 
-
-
 class Pregunta:
     def __init__(self, enunciado, correcta):
         self.enunciado = enunciado
         self.correcta = correcta
 
     def verificar(self, respuesta_usuario):
-        # Normalización para evitar fallos por mayúsculas o espacios
         return str(respuesta_usuario).strip().lower() == str(self.correcta).strip().lower()
 
 class PreguntaOpcionMultiple(Pregunta):
@@ -28,6 +25,16 @@ class PreguntaVerdaderoFalso(Pregunta):
 
     def obtener_opciones(self):
         return self.opciones
+
+class PreguntaProximal(Pregunta):
+    def __init__(self, enunciado, correcta, min_val, max_val):
+        super().__init__(enunciado, correcta)
+        self.min_val = min_val
+        self.max_val = max_val
+
+    def verificar(self, respuesta_usuario):
+        diferencia = abs(int(respuesta_usuario) - int(self.correcta))
+        return diferencia <= 2
 
 preguntas_historia = [
     PreguntaOpcionMultiple("¿En qué año comenzó la Primera Guerra Mundial?", ["1914", "1918", "1939", "1912"], "1914"),
@@ -59,7 +66,9 @@ preguntas_historia = [
     PreguntaVerdaderoFalso("¿La bomba atómica se usó por primera vez en la Primera Guerra Mundial?", "Falso"),
     PreguntaVerdaderoFalso("¿Atila era el líder de los Hunos?", "Verdadero"),
     PreguntaVerdaderoFalso("¿El Renacimiento comenzó en Italia?", "Verdadero"),
-    PreguntaVerdaderoFalso("¿Abraham Lincoln fue asesinado en un teatro?", "Verdadero")
+    PreguntaVerdaderoFalso("¿Abraham Lincoln fue asesinado en un teatro?", "Verdadero"),
+    PreguntaProximal("¿En qué año cayó el Imperio Romano de Occidente?", 476, 300, 600),
+    PreguntaProximal("¿En qué año llegó el hombre a la Luna?", 1969, 1900, 2020)
 ]
 
 preguntas_ciencia = [
@@ -92,7 +101,8 @@ preguntas_ciencia = [
     PreguntaVerdaderoFalso("¿El nitrógeno es el gas más abundante en la atmósfera terrestre?", "Verdadero"),
     PreguntaVerdaderoFalso("¿Las ballenas son peces?", "Falso"),
     PreguntaVerdaderoFalso("¿El cero absoluto es 0 grados Celsius?", "Falso"),
-    PreguntaVerdaderoFalso("¿Las abejas pueden ver el color rojo?", "Falso")
+    PreguntaVerdaderoFalso("¿Las abejas pueden ver el color rojo?", "Falso"),
+    PreguntaProximal("¿En qué año propuso Einstein la Teoría de la Relatividad General?", 1915, 1850, 1950)
 ]
 
 preguntas_deportes = [
@@ -125,5 +135,6 @@ preguntas_deportes = [
     PreguntaVerdaderoFalso("¿Pelé nunca ganó un Mundial con Brasil?", "Falso"),
     PreguntaVerdaderoFalso("¿El Waterpolo se juega en una piscina?", "Verdadero"),
     PreguntaVerdaderoFalso("¿Lionel Messi ha ganado 8 Balones de Oro?", "Verdadero"),
-    PreguntaVerdaderoFalso("¿El Super Bowl es la final de la liga de fútbol americano?", "Verdadero")
+    PreguntaVerdaderoFalso("¿El Super Bowl es la final de la liga de fútbol americano?", "Verdadero"),
+    PreguntaProximal("¿En qué año se celebraron los primeros Juegos Olímpicos modernos?", 1896, 1800, 2000)
 ]
