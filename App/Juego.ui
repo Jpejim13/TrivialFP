@@ -7,21 +7,28 @@
     <x>0</x>
     <y>0</y>
     <width>897</width>
-    <height>667</height>
+    <height>673</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Clickthon</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget { background-color: #ECF0F1; }</string>
+   <string notr="true">QWidget { background-color: #ECF0F1; }
+* {
+    color: black;
+}
+QPushButton {
+    border: 2px solid black;
+    border-radius: 6px;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QStackedWidget" name="pantallas">
       <property name="currentIndex">
-       <number>4</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="pantallaInicio">
        <property name="font">
@@ -625,7 +632,7 @@ font: 600 12pt &quot;URW Gothic [urw]&quot;;
      <x>0</x>
      <y>0</y>
      <width>897</width>
-     <height>22</height>
+     <height>33</height>
     </rect>
    </property>
   </widget>
